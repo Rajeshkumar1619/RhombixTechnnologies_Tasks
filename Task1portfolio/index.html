@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Rajesh Jee portfolio" />
+  <title>Rajesh Jee | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="topbar" data-elevated="false">
+    <div class="container topbar__inner">
+      <div class="brand" aria-label="Brand">
+        <div class="brand__mark" aria-hidden="true">RJ</div>
+        <div>
+          <div class="brand__name">Rajesh Jee</div>
+          <div class="brand__tag">BSE Software Engineering </div>
+        </div>
+      </div>
+
+      <nav class="nav" aria-label="Primary">
+        <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="navMenu">
+          <span class="nav__toggleIcon" aria-hidden="true"></span>
+          <span class="sr-only">Menu</span>
+        </button>
+        <div class="nav__menu" id="navMenu">
+          <a href="#intro" class="nav__link" data-nav="intro">Intro</a>
+          <a href="#background" class="nav__link" data-nav="background">Background</a>
+          <a href="#projects" class="nav__link" data-nav="projects">Projects</a>
+          <a href="#skills" class="nav__link" data-nav="skills">Skills</a>
+          <a href="#experience" class="nav__link" data-nav="experience">Experience</a>
+          <a href="#testimonials" class="nav__link" data-nav="testimonials">Testimonials</a>
+          <a href="#blog" class="nav__link" data-nav="blog">Blog</a>
+          <a href="#achievements" class="nav__link" data-nav="achievements">Achievements</a>
+          <a href="#contact" class="nav__link" data-nav="contact">Contact</a>
+        </div>
+      </nav>
+
+      <div class="actions" aria-label="Actions">
+        <button class="icon-btn" id="themeToggle" type="button" aria-label="Toggle theme">
+          <span aria-hidden="true" id="themeIcon">🌙</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <!-- INTRODUCTION -->
+    <section id="intro" class="section hero" data-section="intro">
+      <div class="hero__grid">
+        <div>
+          <div class="pill">Full-stack • Node.js • JavaScript</div>
+          <h1 class="hero__title">Hi, I’m <span class="accent">Rajesh Jee</span>.</h1>
+          <p class="hero__subtitle">
+            I build responsive websites  and enjoy turning ideas into working products.
+            My ambition is to become a strong web developer who ships reliable, user-focused solutions.
+          </p>
+
+          <div class="hero__cta">
+            <a class="btn" href="#projects">View Projects</a>
+            <a class="btn btn--ghost" href="#contact">Contact Me</a>
+          </div>
+
+          <div class="hero__meta">
+            <div class="meta-card">
+              <div class="meta-card__label">Currently</div>
+              <div class="meta-card__value">6th Semester • BSE Software Engineering</div>
+            </div>
+            <div class="meta-card">
+              <div class="meta-card__label">Focus</div>
+              <div class="meta-card__value">Node.js, Express, JavaScript, Bootstraps,HTML,Css,and to become full stack</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__card" role="region" aria-label="Quick facts">
+          <h2 class="h2">Quick facts</h2>
+          <ul class="facts">
+            <li><strong>Location:</strong> Rahim Yar Khan, Pakistan</li>
+            <li><strong>Tools:</strong> VS Code, Git, Postman</li>
+          </ul>
+
+          <div class="divider"></div>
+          <div class="muted"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BACKGROUND -->
+    <section id="background" class="section" data-section="background">
+      <div class="section__header">
+        <h2 class="h2">Background</h2>
+        <p class="section__lead">Education and certifications that shaped my foundation.</p>
+      </div>
+
+      <div class="grid grid--2">
+        <div class="card">
+          <h3 class="h3">Education</h3>
+          <ul class="list">
+<li>
+              <div class="list__title">BS Software Engineering (BSE)</div>
+              <div class="list__meta">COMSATS University Islamabad • Vehari Campus</div>
+              <div class="list__meta">Present • 6th Semester</div>
+            </li>
+            <li>
+              <div class="list__title">FSc in ICS</div>
+              <div class="list__meta">Danish School Boys, Rahim Yar Khan</div>
+              <div class="list__meta">Completed: 2023</div>
+            </li>
+            <li>
+              <div class="list__title">Matric</div>
+              <div class="list__meta">Danish School Boys, Rahim Yar Khan</div>
+              <div class="list__meta">Completed: 2021</div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3 class="h3">Key Certifications</h3>
+<p class="muted">No formal certifications provided yet. I’m currently building projects to strengthen my skills.</p>
+          <div class="divider"></div>
+          <div class="subtle-box">
+            <strong>Learning path:</strong> JavaScript + Node.js + Express + REST APIs + UI/UX basics
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section" data-section="projects">
+      <div class="section__header">
+        <h2 class="h2">Projects</h2>
+        <p class="section__lead">A variety of projects with outcomes, tech used, and my role.</p>
+      </div>
+
+      <div class="cards">
+<article class="card project" aria-label="Project: Task Manager App">
+          <div class="project__top">
+            <h3 class="h3">Task Manager App (Daily Tasks)</h3>
+            <div class="badge">Progress tracking</div>
+          </div>
+          <p class="muted">
+            Daily task manager to add tasks, mark them complete, and display your progress.
+          </p>
+          <div class="project__grid">
+            <div>
+              <div class="k">Role</div>
+              <div class="v">Developer • Feature implementation & logic</div>
+            </div>
+            <div>
+              <div class="k">Tech</div>
+              <div class="v">Flutter (mobile) + local persistence concepts</div>
+            </div>
+            <div>
+              <div class="k">Outcome</div>
+              <div class="v">Tasks completion is tracked daily and progress is visible for each day (demo-ready app behavior).</div>
+            </div>
+          </div>
+        </article>
+
+<article class="card project" aria-label="Project: Library Management System">
+          <div class="project__top">
+            <h3 class="h3">Library Management System (Web)</h3>
+            <div class="badge badge--primary">Backend + UI flow</div>
+          </div>
+          <p class="muted">
+            Library management system web app to manage library data and operations using a backend.
+          </p>
+          <div class="project__grid">
+            <div>
+              <div class="k">Role</div>
+              <div class="v">Developer • API & server-side logic</div>
+            </div>
+            <div>
+              <div class="k">Tech</div>
+              <div class="v">Node.js, Express</div>
+            </div>
+            <div>
+              <div class="k">Outcome</div>
+              <div class="v">Implemented server routes/APIs to support library operations (books + actions) with structured request/response flow.</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="card project" aria-label="Project: Portfolio Platform (this site)">
+          <div class="project__top">
+            <h3 class="h3">Portfolio Website (This Page)</h3>
+            <div class="badge">Front-end craft</div>
+          </div>
+          <p class="muted">
+            A responsive portfolio page built with clean UI components and localStorage-powered interactivity.
+          </p>
+          <div class="project__grid">
+            <div>
+              <div class="k">Role</div>
+              <div class="v">Designer + Developer</div>
+            </div>
+            <div>
+              <div class="k">Tech</div>
+              <div class="v">HTML, CSS, JavaScript, localStorage</div>
+            </div>
+            <div>
+              <div class="k">Outcome</div>
+              <div class="v">Theme preference + contact notes persist locally.</div>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="subtle-box subtle-box--note">
+        <strong>Tip:</strong> Toggle theme and write a short note in Contact—both are saved using <code>localStorage</code>.
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section" data-section="skills">
+      <div class="section__header">
+        <h2 class="h2">Skills</h2>
+        <p class="section__lead">Technical skills and abilities relevant to web development.</p>
+      </div>
+
+      <div class="grid grid--3">
+        <div class="card">
+          <h3 class="h3">Programming</h3>
+          <div class="chips">
+            <span class="chip">JavaScript (ES6+)</span>
+            <span class="chip">Node.js</span>
+            <span class="chip">REST basics</span>
+            <span class="chip">Debugging</span>
+          </div>
+        </div>
+        <div class="card">
+          <h3 class="h3">Web Development</h3>
+          <div class="chips">
+            <span class="chip">HTML</span>
+            <span class="chip">CSS</span>
+            <span class="chip">Responsive UI</span>
+            <span class="chip">Accessibility basics</span>
+            <span class="chip">Node.js</span>
+            <span class="chip">Express</span>
+          </div>
+        </div>
+        <div class="card">
+          <h3 class="h3">Software Practices</h3>
+          <div class="chips">
+            <span class="chip">localStorage & persistence</span>
+            <span class="chip">Git workflow</span>
+            <span class="chip">Clean UI components</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section" data-section="experience">
+      <div class="section__header">
+        <h2 class="h2">Experience</h2>
+        <p class="section__lead">Work history, responsibilities, and contributions.</p>
+      </div>
+
+      <div class="card">
+        <h3 class="h3">Work Experience</h3>
+        <p class="muted">No formal experience provided. I’m building projects and learning through implementation.</p>
+
+        <div class="divider"></div>
+
+        <h3 class="h3">Key Contributions (Projects)</h3>
+        <div class="timeline">
+          <div class="t-item">
+            <div class="t-dot" aria-hidden="true"></div>
+            <div class="t-content">
+              <div class="t-title">Task Manager App</div>
+              <div class="t-meta">HTML/CSS/JavaScript + localStorage</div>
+              <ul class="list list--tight">
+                <li>Implemented persistent task storage in the browser.</li>
+                <li>Added completion tracking and progress visualization patterns.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="t-item">
+            <div class="t-dot" aria-hidden="true"></div>
+            <div class="t-content">
+              <div class="t-title">Library Management System (Web)</div>
+              <div class="t-meta">Node.js + Express</div>
+              <ul class="list list--tight">
+                <li>Designed server routes and integrated data flow.</li>
+                <li>Focused on structured APIs and UI-backend connection.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials" class="section" data-section="testimonials">
+      <div class="section__header">
+        <h2 class="h2">Testimonials</h2>
+        <p class="section__lead">Endorsements if available.</p>
+      </div>
+
+      <div class="grid grid--2">
+        <div class="card">
+          <h3 class="h3">No testimonials yet</h3>
+          <p class="muted">Testimonials are none right now. This section is ready for future updates.</p>
+        </div>
+        <div class="card">
+          <h3 class="h3">What people can look for</h3>
+          <ul class="list">
+            <li>Clean code and maintainable structure</li>
+            <li>Focus on working features and persistence</li>
+            <li>Responsiveness and usability</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOG / ARTICLES -->
+    <section id="blog" class="section" data-section="blog">
+      <div class="section__header">
+        <h2 class="h2">Blog / Articles</h2>
+        <p class="section__lead">Links demonstrating communication skills.</p>
+      </div>
+
+      <div class="card">
+        <h3 class="h3">Links</h3>
+        <ul class="list">
+          <li><a href="https://www.linkedin.com/posts/rajesh-kumar-5b6375338_flutter-flutterdev-mobileappdevelopment-ugcPost-7462808962577498112-KP6g/?utm_source=share&utm_medium=member_android&rcm=ACoAAFTFgBoB71lsqQy92NA15fjjuvQ5-M56i9Y" target="_blank" rel="noopener">LinkedIn post about Flutter app development</a></li>
+          <li>I can speak English well and manage clients effectively.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ACHIEVEMENTS -->
+    <section id="achievements" class="section" data-section="achievements">
+      <div class="section__header">
+        <h2 class="h2">Achievements</h2>
+        <p class="section__lead">Awards and honors.</p>
+      </div>
+
+      <div class="grid grid--2">
+        <div class="card">
+          <h3 class="h3">Awards</h3>
+<p class="muted">None provided.</p>
+        </div>
+        <div class="card">
+          <h3 class="h3">Highlights</h3>
+          <ul class="list">
+            <li>Continuous learning through project-based development</li>
+            <li>Built working websites using modern JavaScript and Node.js to become full stack developer</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section section--contact" data-section="contact">
+      <div class="section__header">
+        <h2 class="h2">Contact</h2>
+        <p class="section__lead">Provide your contact info and leave a note (saved locally).</p>
+      </div>
+
+      <div class="grid grid--2">
+        <div class="card">
+          <h3 class="h3">Get in touch</h3>
+          <div class="contact">
+            <div class="contact__row">
+              <div class="k">Email</div>
+              <div class="v"><a href="mailto:rajeshjee.1619@gmail.com">rajeshjee.1619@gmail.com</a></div>
+            </div>
+            <div class="contact__row">
+              <div class="k">Phone</div>
+              <div class="v"><a href="tel:+923072422240">0307 2422240</a></div>
+            </div>
+            <div class="contact__row">
+              <div class="k">LinkedIn</div>
+              <div class="v"><a href="https://www.linkedin.com/in/rajesh-kumar-5b6375338" target="_blank" rel="noopener">/in/rajesh-kumar-5b6375338</a></div>
+            </div>
+          </div>
+
+          <div class="divider"></div>
+          <div class="muted">
+             <code>localStorage</code>.
+          </div>
+        </div>
+
+        <div class="card">
+          <h3 class="h3">Leave a note (local)</h3>
+          <form id="noteForm" class="form" autocomplete="off">
+            <label class="label" for="visitorName">Your name</label>
+            <input class="input" id="visitorName" name="visitorName" type="text" placeholder="e.g., Ali" />
+
+            <label class="label" for="visitorMessage">Message</label>
+            <textarea class="textarea" id="visitorMessage" name="visitorMessage" rows="5" placeholder="Write a short note..."></textarea>
+
+            <div class="form__row">
+              <button class="btn" type="submit">Save Note</button>
+              <button class="btn btn--ghost" id="clearNote" type="button">Clear</button>
+            </div>
+
+            <div class="saved" id="savedStatus" role="status" aria-live="polite"></div>
+          </form>
+
+          <div class="divider"></div>
+
+          <div>
+            <h4 class="h4">Saved note preview</h4>
+            <div class="notePreview" id="notePreview">
+              <div class="muted">No note saved yet.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer__inner">
+        <div class="muted">© <span id="year"></span> Rajesh Jee. Built with HTML/CSS/JavaScript + localStorage.</div>
+        <div class="footer__links">
+          <a href="#intro">Back to top</a>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
