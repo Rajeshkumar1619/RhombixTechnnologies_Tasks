@@ -1,0 +1,10 @@
+<div class="box">
+  <h3>📤 Upload MP3</h3>
+  <input class="file" type="file" accept="audio/*" multiple (change)="onFiles($any($event.target).files)" />
+
+  <div class="row">
+    <input class="input" type="text" [(ngModel)]="tagInput" placeholder="Tags (comma separated)" />
+  </div>
+
+  <div class="hint">Uploaded songs are added to your library instantly for local playback.</div>
+</div>

@@ -1,0 +1,82 @@
+<section class="card left">
+  <div class="sectionHead">
+    <h2>Library</h2>
+    <span class="count">{{ filteredTracks().length }} tracks</span>
+  </div>
+
+  <div class="headerRow">
+    <div class="search">
+      <div class="icon" aria-hidden="true">🔎</div>
+      <input
+        class="searchInput"
+        [ngModel]="getSearch()"
+        (ngModelChange)="setSearch($event)"
+        placeholder="Search songs, artists, tags..."
+        autocomplete="off"
+      />
+    </div>
+
+    <div class="filters">
+      <select
+        [ngModel]="getSelectedTag()"
+        (ngModelChange)="setSelectedTag($event)"
+        aria-label="Tag filter"
+      >
+        @for (t of tags(); track t) {
+          <option [value]="t">{{ t === 'all' ? 'All tags' : t }}</option>
+        }
+      </select>
+
+      <label class="featuredToggle">
+        <input
+          type="checkbox"
+          [ngModel]="getFeaturedOnly()"
+          (ngModelChange)="setFeaturedOnly($event)"
+        />
+        <span>Featured only</span>
+      </label>
+    </div>
+  </div>
+
+  @if (firstFeatured(); as feat) {
+    <div class="featureBanner">
+      <div>
+        <strong>Featured pick</strong>
+        <div class="featureText">{{ feat.title }} — {{ feat.artist }}</div>
+      </div>
+      <button class="featureBtn" type="button" (click)="onTrackClick(feat.id)">Play featured</button>
+    </div>
+  }
+
+  <div class="trackGrid" aria-live="polite">
+    @if (filteredTracks().length === 0) {
+      <div class="empty">No tracks found. Try a different search or filter.</div>
+    } @else {
+      @for (t of filteredTracks(); track t.id) {
+        <div
+          class="track"
+          [class.active]="t.id === activeId()"
+          role="button"
+          tabindex="0"
+          (click)="onTrackClick(t.id)"
+          (keydown)="onTrackKeydown($event, t.id)"
+        >
+          <div class="cover" aria-hidden="true">{{ ((t.title || '?')[0] || '🎵').toUpperCase() }}</div>
+          <div class="tmeta">
+            <div class="title">{{ t.title }}</div>
+            <div class="artist">{{ t.artist }}</div>
+            <div class="tags">
+              @for (tag of t.tags; track tag) {
+                <span class="tag">{{ tag }}</span>
+              }
+              @if (t.featured) {
+                <span class="tag featured">Featured</span>
+              }
+            </div>
+          </div>
+          <div class="playHint" aria-hidden="true">▶</div>
+        </div>
+      }
+    }
+  </div>
+</section>

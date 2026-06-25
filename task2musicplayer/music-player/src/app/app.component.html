@@ -1,0 +1,30 @@
+<div class="wrap">
+  <div class="topbar">
+    <div class="brand">
+      <div class="logo" aria-hidden="true"></div>
+      <div>
+        <h1>Rhombix Music Player</h1>
+        <small>Playlist • Search • Categories • Upload • Player Controls</small>
+      </div>
+    </div>
+    <div class="pill" title="Keyboard shortcuts">
+      <span aria-hidden="true">⌨️</span>
+      <span><kbd>Space</kbd> play/pause • <kbd>←</kbd>/<kbd>→</kbd> skip • <kbd>M</kbd> mute</span>
+    </div>
+  </div>
+
+  <div class="layout">
+    <div class="leftCol">
+      <app-upload></app-upload>
+      <app-library
+        [activeTrackId]="activeTrackId()"
+        (trackClick)="onLibraryTrackClick($event)"
+      ></app-library>
+    </div>
+
+    <div class="rightCol">
+      <app-playlist-manager (playlistSelected)="onPlaylistSelected($event)"></app-playlist-manager>
+      <app-player></app-player>
+    </div>
+  </div>
+</div>

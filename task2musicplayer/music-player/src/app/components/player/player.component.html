@@ -1,0 +1,77 @@
+<aside class="card player">
+  <div class="playerLabel">Now Playing</div>
+
+  <div class="now">
+    <div class="coverBig" [class.playing]="player.isPlaying()" aria-hidden="true">
+      {{ coverLetter(currentTrack()?.title) }}
+    </div>
+    <div class="nmeta">
+      <div class="nTitle">{{ currentTrack()?.title || 'Select a track' }}</div>
+      <div class="nArtist">{{ currentTrack()?.artist || 'Choose something from the library' }}</div>
+    </div>
+  </div>
+
+  <div class="progressWrap">
+    <input
+      class="slider"
+      type="range"
+      min="0"
+      max="1"
+      step="0.001"
+      [value]="progressRatio()"
+      (input)="seekRatioInput($any($event.target).valueAsNumber)"
+      aria-label="Seek"
+    />
+
+    <div class="timeRow">
+      <div class="t">{{ player.formattedCurrentTime }}</div>
+      <div class="t">{{ player.formattedDuration }}</div>
+    </div>
+  </div>
+
+  <div class="controls">
+    <div class="btnRow">
+      <button class="btn" type="button" (click)="prev()" aria-label="Previous">⏮️</button>
+      <button class="btn primary" type="button" (click)="togglePlay()" aria-label="Play/Pause">
+        {{ player.isPlaying() ? '⏸️' : '▶️' }}
+      </button>
+      <button class="btn" type="button" (click)="next()" aria-label="Next">⏭️</button>
+    </div>
+
+    <div class="btnRow">
+      <button class="btn" type="button" (click)="toggleShuffle()" aria-label="Shuffle" [class.on]="player.shuffle()">🔀</button>
+      <button class="btn" type="button" (click)="toggleRepeat()" aria-label="Repeat" [class.on]="player.repeat() === 'one'">🔁</button>
+    </div>
+  </div>
+
+  <div class="volWrap">
+    <div class="volLabel">
+      <span>Volume</span>
+      <span>{{ volumePercent() }}%</span>
+    </div>
+    <input
+      class="slider"
+      type="range"
+      min="0"
+      max="1"
+      step="0.01"
+      [value]="player.volume()"
+      (input)="volumeInput($any($event.target).valueAsNumber)"
+      aria-label="Volume"
+    />
+    <button class="muteBtn" type="button" (click)="muteToggle()">
+      {{ player.isMuted() || player.volume() === 0 ? '🔊 Unmute' : '🔇 Mute' }}
+    </button>
+  </div>
+
+  <div class="subtleRow">
+    <div class="subtle">
+      <span>Tags</span>
+      <span>{{ currentTags() }}</span>
+    </div>
+    <div class="subtle">
+      <span>Mode</span>
+      <span>{{ modeText() }}</span>
+    </div>
+  </div>
+</aside>

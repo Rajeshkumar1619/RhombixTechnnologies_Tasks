@@ -1,0 +1,87 @@
+<section class="card right">
+  <div class="pmHeader">
+    <div>
+      <h2>Playlists</h2>
+      <div class="muted">Create, edit &amp; play your collections</div>
+    </div>
+  </div>
+
+  <div class="box">
+    <h3>Create new</h3>
+    <input
+      class="input"
+      type="text"
+      placeholder="Playlist name"
+      [ngModel]="getNewName()"
+      (ngModelChange)="setNewName($event)"
+    />
+    <input
+      class="input"
+      type="text"
+      placeholder="Description (optional)"
+      [ngModel]="getNewDesc()"
+      (ngModelChange)="setNewDesc($event)"
+    />
+    <button class="primary" type="button" (click)="createPlaylist()">Create playlist</button>
+  </div>
+
+  <div class="box">
+    <h3>Your playlists</h3>
+
+    @if (playlists().length === 0) {
+      <div class="muted emptyList">No playlists yet — create one above.</div>
+    }
+
+    @for (p of playlists(); track p.id) {
+      <div class="playlistRow" [class.selected]="p.id === selectedPlaylistId()">
+        <button class="playlistPick" type="button" (click)="selectPlaylist(p.id)">
+          <span class="plName">{{ p.name }}</span>
+          <span class="plCount">{{ p.trackIds.length }} tracks</span>
+        </button>
+        <div class="playlistActions">
+          <button class="small" type="button" (click)="startEdit(p)">Edit</button>
+          <button class="small danger" type="button" (click)="deletePlaylist(p.id)">Delete</button>
+        </div>
+      </div>
+    }
+  </div>
+
+  @if (selected(); as pl) {
+    <div class="box selectedBox">
+      <div class="selectedHead">
+        <h3>Tracks in: {{ pl.name }}</h3>
+        <button class="playBtn" type="button" (click)="playSelected()">▶ Play playlist</button>
+      </div>
+      <input
+        class="input"
+        type="text"
+        placeholder="Filter tracks..."
+        [ngModel]="getSearchTrack()"
+        (ngModelChange)="setSearchTrack($event)"
+      />
+
+      <div class="trackPickGrid">
+        @for (t of filteredTracksForEdit(); track t.id) {
+          <label class="trackPick">
+            <input type="checkbox" [checked]="isInSelected(t.id)" (change)="toggleTrackInSelected(t.id)" />
+            <span class="tpTitle">{{ t.title }}</span>
+            <span class="tpArtist">{{ t.artist }}</span>
+          </label>
+        }
+      </div>
+    </div>
+  }
+
+  @if (editId()) {
+    <div class="box">
+      <h3>Edit playlist</h3>
+      <input class="input" type="text" [ngModel]="getEditName()" (ngModelChange)="setEditName($event)" />
+      <input class="input" type="text" [ngModel]="getEditDesc()" (ngModelChange)="setEditDesc($event)" />
+
+      <div class="rowBtns">
+        <button class="primary" type="button" (click)="saveEdit()">Save</button>
+        <button class="ghost" type="button" (click)="cancelEdit()">Cancel</button>
+      </div>
+    </div>
+  }
+</section>
