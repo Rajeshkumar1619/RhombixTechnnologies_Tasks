@@ -1,0 +1,114 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "title": "The Great Gatsby",
+      "author": "ZAHID",
+      "isbn": "978-0743273565",
+      "category": "Fiction",
+      "publishYear": 1925,
+      "totalCopies": 5,
+      "availableCopies": 3,
+      "status": "available"
+    },
+    {
+      "id": 2,
+      "title": "To Kill a Mockingbird",
+      "author": "Harper Lee",
+      "isbn": "978-0061120084",
+      "category": "Fiction",
+      "publishYear": 1960,
+      "totalCopies": 4,
+      "availableCopies": 2,
+      "status": "available"
+    },
+    {
+      "id": 3,
+      "title": "1984",
+      "author": "ALI",
+      "isbn": "978-0451524935",
+      "category": "Dystopian",
+      "publishYear": 1949,
+      "totalCopies": 6,
+      "availableCopies": 4,
+      "status": "available"
+    },
+    {
+      "id": 4,
+      "title": "Pride and Prejudice",
+      "author": "RAJESH KUMAR",
+      "isbn": "978-0141439518",
+      "category": "Romance",
+      "publishYear": 1813,
+      "totalCopies": 4,
+      "availableCopies": 1,
+      "status": "available"
+    },
+    {
+      "id": 5,
+      "title": "The Catcher in the Rye",
+      "author": "RAYAN",
+      "isbn": "978-0316769174",
+      "category": "Fiction",
+      "publishYear": 1951,
+      "totalCopies": 4,
+      "availableCopies": 0,
+      "status": "borrowed"
+    },
+    {
+      "title": "Mathematics",
+      "author": "Alyan",
+      "isbn": "1234567788",
+      "category": "Science",
+      "publishYear": 2026,
+      "totalCopies": 1,
+      "availableCopies": 1,
+      "status": "available",
+      "id": 6
+    },
+    {
+      "title": "Romance2",
+      "author": "ali raza",
+      "isbn": "66785544890",
+      "category": "Fiction",
+      "publishYear": 2026,
+      "totalCopies": 1,
+      "availableCopies": 1,
+      "status": "available",
+      "id": 7
+    }
+  ],
+  "members": [
+    {
+      "firstName": "Rajesh ",
+      "lastName": "Kumar",
+      "email": "rjee369@gmail.com",
+      "membershipStatus": "active",
+      "membershipDate": "2026-07-21",
+      "borrowedBooks": 0,
+      "maxBorrowLimit": 5,
+      "id": 1
+    },
+    {
+      "firstName": "Muhammad",
+      "lastName": "Hussain",
+      "email": "muhammadhussain161664@gmail.com",
+      "membershipStatus": "active",
+      "membershipDate": "2026-07-21",
+      "borrowedBooks": 0,
+      "maxBorrowLimit": 5,
+      "id": 2
+    },
+    {
+      "firstName": "Rayan",
+      "lastName": "Ali",
+      "email": "abc@gmail.com",
+      "membershipStatus": "active",
+      "membershipDate": "2026-07-21",
+      "borrowedBooks": 0,
+      "maxBorrowLimit": 5,
+      "id": 3
+    }
+  ],
+  "borrow-records": []
+}

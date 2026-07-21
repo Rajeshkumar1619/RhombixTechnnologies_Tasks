@@ -1,0 +1,33 @@
+{
+  "name": "library-management-system",
+  "version": "1.0.0",
+  "description": "A comprehensive Library Management System built with React and Bootstrap",
+  "private": true,
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.8.0",
+    "bootstrap": "^5.3.0",
+    "axios": "^1.3.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "server": "json-server --watch db.json --port 3001"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^3.1.0",
+    "vite": "^4.2.0",
+    "json-server": "^0.17.3"
+  },
+  "keywords": [
+    "library",
+    "management",
+    "react",
+    "bootstrap",
+    "rest-api"
+  ],
+  "author": "Computer Science Department",
+  "license": "MIT"
+}

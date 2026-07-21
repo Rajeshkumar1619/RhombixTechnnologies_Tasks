@@ -1,0 +1,42 @@
+/* Navbar Styling */
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+  letter-spacing: 0.5px;
+}
+
+.navbar-brand:hover {
+  color: #fff !important;
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+
+.nav-link {
+  margin-left: 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #0d6efd !important;
+  border-bottom: 2px solid #0d6efd;
+  padding-bottom: 0.25rem;
+}
+
+.navbar-nav .nav-link.active {
+  color: #0d6efd !important;
+  border-bottom: 2px solid #0d6efd;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 992px) {
+  .nav-link {
+    margin-left: 0;
+    padding: 0.5rem 0;
+  }
+  
+  .navbar-brand {
+    font-size: 1.25rem;
+  }
+}

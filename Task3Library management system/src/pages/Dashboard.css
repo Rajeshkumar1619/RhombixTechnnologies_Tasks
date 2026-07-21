@@ -1,0 +1,181 @@
+/* Dashboard Styling */
+
+.page-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+/* Stat Cards */
+.stat-card {
+  border-radius: 12px;
+  padding: 1.5rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  min-height: 120px;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.stat-card.bg-primary {
+  background: linear-gradient(135deg, #0d6efd 0%, #0d5ae8 100%);
+}
+
+.stat-card.bg-success {
+  background: linear-gradient(135deg, #198754 0%, #157347 100%);
+}
+
+.stat-card.bg-info {
+  background: linear-gradient(135deg, #0dcaf0 0%, #0ba3cc 100%);
+}
+
+.stat-card.bg-warning {
+  background: linear-gradient(135deg, #ffc107 0%, #ffb300 100%);
+}
+
+.stat-card.bg-secondary {
+  background: linear-gradient(135deg, #6c757d 0%, #5a6268 100%);
+}
+
+.stat-card.bg-danger {
+  background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+}
+
+.stat-icon {
+  font-size: 2.5rem;
+  min-width: 60px;
+  text-align: center;
+}
+
+.stat-content {
+  flex: 1;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+  opacity: 0.95;
+  margin-bottom: 0.5rem;
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1;
+}
+
+/* Summary Stats */
+.summary-stat {
+  padding: 1.5rem;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  transition: all 0.2s ease;
+}
+
+.summary-stat:hover {
+  background-color: #fff;
+  border-color: #dee2e6;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.summary-stat h4 {
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+/* Card Styling */
+.card {
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  background-color: #f8f9fa;
+  border-bottom: 2px solid #dee2e6;
+  border-radius: 8px 8px 0 0;
+  padding: 1rem;
+}
+
+.card-header h5 {
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+/* Alert Styling */
+.alert {
+  border-radius: 8px;
+  border: none;
+  margin-top: 2rem;
+}
+
+.alert ul {
+  padding-left: 1.5rem;
+  margin-bottom: 0;
+}
+
+.alert li {
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .page-title {
+    font-size: 2rem;
+  }
+
+  .stat-card {
+    min-height: 100px;
+    padding: 1rem;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .stat-icon {
+    font-size: 2rem;
+    min-width: unset;
+  }
+
+  .stat-value {
+    font-size: 1.75rem;
+  }
+
+  .stat-label {
+    font-size: 0.8rem;
+  }
+
+  .summary-stat {
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Progress indicator styles */
+.progress {
+  height: 8px;
+  background-color: #e9ecef;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  background: linear-gradient(90deg, #0d6efd, #0dcaf0);
+  transition: width 0.3s ease;
+}
