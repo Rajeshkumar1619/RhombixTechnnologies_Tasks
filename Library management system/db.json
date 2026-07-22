@@ -1,0 +1,140 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "title": "The Great Gatsby",
+      "author": "F. Scott Fitzgerald",
+      "isbn": "978-0743273565",
+      "category": "Fiction",
+      "publishYear": 1925,
+      "totalCopies": 5,
+      "availableCopies": 3,
+      "status": "available"
+    },
+    {
+      "id": 2,
+      "title": "To Kill a Mockingbird",
+      "author": "Harper Lee",
+      "isbn": "978-0061120084",
+      "category": "Fiction",
+      "publishYear": 1960,
+      "totalCopies": 4,
+      "availableCopies": 2,
+      "status": "available"
+    },
+    {
+      "id": 3,
+      "title": "1984",
+      "author": "George Orwell",
+      "isbn": "978-0451524935",
+      "category": "Dystopian",
+      "publishYear": 1949,
+      "totalCopies": 6,
+      "availableCopies": 4,
+      "status": "available"
+    },
+    {
+      "id": 4,
+      "title": "Pride and Prejudice",
+      "author": "Jane Austen",
+      "isbn": "978-0141439518",
+      "category": "Romance",
+      "publishYear": 1813,
+      "totalCopies": 3,
+      "availableCopies": 1,
+      "status": "available"
+    },
+    {
+      "id": 5,
+      "title": "The Catcher in the Rye",
+      "author": "J.D. Salinger",
+      "isbn": "978-0316769174",
+      "category": "Fiction",
+      "publishYear": 1951,
+      "totalCopies": 4,
+      "availableCopies": 0,
+      "status": "borrowed"
+    }
+  ],
+  "members": [
+    {
+      "id": 1,
+      "firstName": "muhammad ",
+      "lastName": "hussain ",
+      "email": "abc.@email.com",
+      "membershipDate": "2024-01-15",
+      "membershipStatus": "active",
+      "borrowedBooks": 2,
+      "maxBorrowLimit": 5
+    },
+    {
+      "id": 2,
+      "firstName": "Sadam",
+      "lastName": "Hussain",
+      "email": "sadam.@email.com",
+      "membershipDate": "2024-02-20",
+      "membershipStatus": "active",
+      "borrowedBooks": 1,
+      "maxBorrowLimit": 5
+    },
+    {
+      "id": 3,
+      "firstName": "Taimoor",
+      "lastName": "Khan",
+      "email": "taimoor,@email.com",
+      "membershipDate": "2023-12-10",
+      "membershipStatus": "active",
+      "borrowedBooks": 3,
+      "maxBorrowLimit": 5
+    },
+    {
+      "firstName": "Rajesh",
+      "lastName": "Kumar",
+      "email": "raj@gmail.com",
+      "membershipStatus": "active",
+      "membershipDate": "2026-03-09",
+      "borrowedBooks": 0,
+      "maxBorrowLimit": 5,
+      "id": 4
+    },
+    {
+      "firstName": "Rayan",
+      "lastName": "Shahabaz",
+      "email": "admin1@gmail.com",
+      "membershipStatus": "active",
+      "membershipDate": "2026-03-09",
+      "borrowedBooks": 0,
+      "maxBorrowLimit": 5,
+      "id": 5
+    }
+  ],
+  "borrow-records": [
+    {
+      "id": 1,
+      "bookId": 1,
+      "memberId": 1,
+      "borrowDate": "2024-02-20",
+      "dueDate": "2024-03-20",
+      "returnDate": null,
+      "status": "borrowed"
+    },
+    {
+      "id": 2,
+      "bookId": 2,
+      "memberId": 2,
+      "borrowDate": "2024-02-25",
+      "dueDate": "2024-03-25",
+      "returnDate": null,
+      "status": "borrowed"
+    },
+    {
+      "id": 3,
+      "bookId": 3,
+      "memberId": 1,
+      "borrowDate": "2024-02-28",
+      "dueDate": "2024-03-28",
+      "returnDate": null,
+      "status": "borrowed"
+    }
+  ]
+}
